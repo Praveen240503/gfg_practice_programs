@@ -9,7 +9,7 @@ class Solution
 {
     public:
         
-        int lcs(string &text1, string &text2, string &text3, int ind1,int ind2, int ind3){
+        int lcs(string text1, string text2, string text3, int ind1,int ind2, int ind3){
             if(ind1<0 || ind2<0 || ind3<0)return 0;
             
             if(dp[ind1][ind2][ind3]!=-1)return dp[ind1][ind2][ind3];
