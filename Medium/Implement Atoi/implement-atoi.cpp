@@ -12,19 +12,21 @@ class Solution{
     /*You are required to complete this method */
     int atoi(string s) {
         //Your code here
-        int n=s.size();
-        int m=0;
-        int f=0,b=0;
-        for(auto i:s){
-            if((i=='-') and f==0 )b=1;
-            else if(i>='0' and i<='9'){
-                m=m*10+(i-'0');
-                f=1;
+        int ans=0;
+        int i=0,b=0;
+        if(s[0]=='-'){
+            b=1;
+            i=1;
+        }
+        while(i<s.size()){
+            if(s[i]>='0' and s[i]<='9'){
+                ans=ans * 10 + (s[i]-'0');
             }
             else return -1;
+            i++;
         }
-        if(b==0)return m;
-        else return m*-1;
+        if(b==1)return -1*ans;
+        return ans;
     }
 };
 
