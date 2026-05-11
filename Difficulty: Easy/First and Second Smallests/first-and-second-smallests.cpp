@@ -8,7 +8,7 @@ class Solution {
                 ssmallest = smallest;
                 smallest = arr[i];
             }
-            else if( arr[i] != smallest && arr[i] <ssmallest){
+            else if( arr[i] > smallest && arr[i] <ssmallest){
                 ssmallest = arr[i];
             }
         }
